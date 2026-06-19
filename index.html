@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华体会 — 让每一次点击都值得信赖</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f7f6f3;
+            color: #1e1c1a;
+            line-height: 1.7;
+            letter-spacing: 0.01em;
+        }
+
+        /* 深色头图 */
+        .hero {
+            background: linear-gradient(135deg, #1a1c1e 0%, #2d2f33 100%);
+            color: #f0ede8;
+            padding: 5rem 1.5rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #c8a87c;
+            opacity: 0.6;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 450;
+            letter-spacing: 2px;
+            margin-bottom: 0.75rem;
+            color: #f5f0e9;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 640px;
+            margin: 0.8rem auto 0;
+            color: #cbc6bd;
+            font-weight: 300;
+        }
+
+        .hero .accent-line {
+            display: inline-block;
+            width: 60px;
+            height: 2px;
+            background: #c8a87c;
+            margin-top: 1.2rem;
+            border-radius: 2px;
+        }
+
+        /* 浅色正文区 */
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 2.8rem 1.5rem 4rem;
+        }
+
+        .intro {
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            background: #ffffff;
+            padding: 2rem 2rem 1.8rem;
+            border-radius: 18px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            border: 1px solid #eae7e1;
+        }
+
+        .intro p {
+            margin-bottom: 1.2rem;
+        }
+
+        .intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .intro strong {
+            font-weight: 540;
+            color: #3a3530;
+        }
+
+        .highlight-link {
+            color: #b8885a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .highlight-link:hover {
+            color: #8f6f4a;
+            border-bottom: 1px solid #b8885a;
+        }
+
+        /* 特点列表 — 卡片风格 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2.5rem 0 2.2rem;
+        }
+
+        .feature-card {
+            background: #ffffff;
+            padding: 1.6rem 1.4rem;
+            border-radius: 18px;
+            border: 1px solid #eae7e1;
+            transition: box-shadow 0.25s, transform 0.2s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+            transform: translateY(-2px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 520;
+            margin-bottom: 0.5rem;
+            color: #2c2825;
+            letter-spacing: 0.5px;
+        }
+
+        .feature-card h3::before {
+            content: '· ';
+            color: #b8885a;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #4d4843;
+            line-height: 1.6;
+        }
+
+        /* 提示/引用区 */
+        .insight-box {
+            background: #f3efe9;
+            border-left: 4px solid #c8a87c;
+            padding: 1.5rem 1.8rem;
+            margin: 2.2rem 0 2rem;
+            border-radius: 0 14px 14px 0;
+            color: #2f2b27;
+        }
+
+        .insight-box p {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .insight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .insight-box .small-note {
+            font-size: 0.9rem;
+            color: #6b645d;
+            margin-top: 0.6rem;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            margin: 2.4rem 0 1.8rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e2ddd4;
+            padding: 1rem 0 1.1rem;
+        }
+
+        .faq-item:first-child {
+            padding-top: 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 520;
+            color: #2c2825;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .faq-question::before {
+            content: '▹';
+            color: #b8885a;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            color: #4d4843;
+            font-size: 0.95rem;
+            padding-left: 1.4rem;
+        }
+
+        /* 温和结尾 */
+        .gentle-footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd8cf;
+            color: #6b645d;
+            font-size: 0.95rem;
+        }
+
+        .gentle-footer p {
+            margin-bottom: 0.25rem;
+        }
+
+        .gentle-footer .brand-trust {
+            color: #4a443e;
+            font-weight: 430;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .hero {
+                padding: 3.2rem 1rem 2.8rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 1.8rem 1rem 3rem;
+            }
+
+            .intro {
+                padding: 1.5rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .insight-box {
+                padding: 1.2rem 1.2rem;
+            }
+
+            .faq-question {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 深色头图 -->
+    <section class="hero">
+        <h1>华体会</h1>
+        <p>一份安静的信任，藏在每一次稳定的连接背后。</p>
+        <div class="accent-line"></div>
+    </section>
+
+    <!-- 正文容器 -->
+    <main class="container">
+
+        <!-- 介绍段落 —— 故事叙述式开场 + 承接 -->
+        <div class="intro">
+            <p>
+                几年前刚开始接触网络服务时，我总喜欢反复刷新页面，确认信息是否准确、来源是否可靠。
+                后来慢慢发现，好的平台不需要太多喧哗——它安静地待在书签栏里，每一次需要的时候都在。
+                <strong>华体会</strong>给我的感觉就像这样：没有夸张的承诺，只有一贯的稳定。
+            </p>
+            <p>
+                它不是一个突然冒出来的名字，而是经过时间筛选后依然被许多人放在手边的选择。
+                从基础的访问响应到内容组织方式，都能感受到一种务实的节奏。
+                如果你也在寻找一个信息清晰、界面不杂乱的站点，不妨花几分钟看一看
+                <a href="https://webmain-hth.com.cn" class="highlight-link">华体会</a>——它也许就是你一直在用的那个，只是没留意名字。
+            </p>
+        </div>
+
+        <!-- 特点列表 -->
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>结构干净</h3>
+                <p>页面布局不堆砌，分类直观，减少多余的跳转，每次打开都能快速找到需要的内容。</p>
+            </div>
+            <div class="feature-card">
+                <h3>内容实在</h3>
+                <p>不写标题党，不靠夸张用词吸引点击，每一条信息都经过基本核实，让人看后心里有底。</p>
+            </div>
+            <div class="feature-card">
+                <h3>体验连贯</h3>
+                <p>无论是在电脑还是手机上，页面响应都很自然，没有奇怪的错位或加载卡顿，浏览过程很顺畅。</p>
+            </div>
+            <div class="feature-card">
+                <h3>更新有度</h3>
+                <p>不会频繁推送无意义的通知，内容更新的节奏也保持在一个合理的频率，既不冷清也不吵闹。</p>
+            </div>
+        </div>
+
+        <!-- 场景与提示 (insight box) -->
+        <div class="insight-box">
+            <p><strong>一个常见的场景：</strong>晚上十一点，想查一条之前看过的信息，又不想被各种弹窗打扰。</p>
+            <p>很多朋友会直接打开<a href="https://webmain-hth.com.cn" class="highlight-link">华体会</a>，翻几页，找到，关掉——整个过程不到两分钟，没有多余的动作。</p>
+            <p class="small-note">这也让我想起一个细节：它的页面很少用刺眼的颜色，长时间阅读眼睛不容易累。</p>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="faq-summary">
+            <div class="faq-item">
+                <div class="faq-question">华体会适合什么样的人？</div>
+                <div class="faq-answer">不追求花哨，但希望信息可靠、界面清爽的普通用户。无论是日常浏览还是偶尔查阅，都不会觉得别扭。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">内容更新频率如何？</div>
+                <div class="faq-answer">不算特别频繁，但每次更新都有实质补充，不会为了刷存在感而发布低质量内容。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">是否需要注册或登录？</div>
+                <div class="faq-answer">目前大部分内容直接可见，浏览体验比较开放，具体功能可以到站内看一看。</div>
+            </div>
+        </div>
+
+        <!-- 温和结尾 -->
+        <div class="gentle-footer">
+            <p class="brand-trust">—— 不喧哗，自有声 ——</p>
+            <p>如果你也喜欢干净、克制的浏览体验，不妨把&nbsp;<a href="https://webmain-hth.com.cn" class="highlight-link">华体会</a>&nbsp;放进收藏夹，需要的时候随时打开。</p>
+            <p style="margin-top:0.8rem; font-size:0.85rem; color:#948c83;">一次安静的相遇，胜过十次仓促的点击。</p>
+        </div>
+
+    </main>
+
+</body>
+</html>
