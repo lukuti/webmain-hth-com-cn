@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ng导航 · 稳而有序的发现起点</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', '宋体', 'Songti SC', serif;
+            background-color: #fbf9f5;
+            color: #2e2b28;
+            line-height: 1.7;
+            padding: 0 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 60px;
+            padding-bottom: 80px;
+        }
+
+        .hero {
+            margin-bottom: 70px;
+            border-bottom: 1px solid #d9d2c5;
+            padding-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #3b3530;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #7a7168;
+            font-style: italic;
+            margin-top: 6px;
+        }
+
+        .section-head {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-top: 60px;
+            margin-bottom: 20px;
+            color: #4b443d;
+            border-left: 4px solid #b8a998;
+            padding-left: 18px;
+        }
+
+        .section-text {
+            margin-bottom: 28px;
+            font-size: 1.05rem;
+            text-indent: 2em;
+        }
+
+        .section-text:first-of-type {
+            margin-top: 0;
+        }
+
+        .pullquote {
+            background-color: #f4efe8;
+            padding: 28px 32px;
+            margin: 40px 0;
+            border-radius: 4px;
+            border-left: 5px solid #b8a998;
+            color: #3f3832;
+            font-size: 1.05rem;
+            quotes: "“" "”" "‘" "’";
+        }
+
+        .pullquote p {
+            text-indent: 0;
+            margin-bottom: 6px;
+        }
+
+        .pullquote p:last-child {
+            margin-bottom: 0;
+        }
+
+        .pullquote::before {
+            content: "“";
+            font-size: 3rem;
+            line-height: 0.8;
+            color: #b8a998;
+            display: block;
+            margin-bottom: -16px;
+        }
+
+        .highlight-box {
+            background: #fffbf6;
+            border: 1px solid #dfd8ce;
+            padding: 30px 32px;
+            margin: 40px 0;
+            border-radius: 3px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+        }
+
+        .highlight-box p {
+            text-indent: 0;
+            margin-bottom: 12px;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer-note {
+            margin-top: 80px;
+            padding-top: 32px;
+            border-top: 1px solid #d9d2c5;
+            font-size: 1rem;
+            color: #5e564e;
+            text-align: center;
+        }
+
+        .footer-note a {
+            color: #5e4d3c;
+            text-decoration: none;
+            border-bottom: 1px solid #b8a998;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .footer-note a:hover {
+            color: #2f2822;
+            border-bottom-color: #2f2822;
+        }
+
+        .inline-link {
+            color: #5e4d3c;
+            text-decoration: none;
+            border-bottom: 1px solid #cfc4b6;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .inline-link:hover {
+            color: #2f2822;
+            border-bottom-color: #2f2822;
+        }
+
+        @media (max-width: 560px) {
+            body {
+                padding: 30px 18px 60px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .pullquote, .highlight-box {
+                padding: 20px 18px;
+            }
+            .section-head {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>从一页开始</h1>
+    <div class="sub">稳定、有序、很少被打扰的导航起点</div>
+</div>
+
+<p class="section-text">
+    在信息流无休止滚动的年代，一个简洁、克制的导航页面显得格外珍贵。许多站点试图用繁复的模块和弹窗吸引注意，但真正让人愿意停留的，往往是那些「安安静静给你选择」的空间。<a href="https://dh-ng.com" class="inline-link">ng导航</a>便是在这种想法下慢慢成形的——它不追逐浮夸的视觉冲击，而是把结构清晰、响应迅速、内容可靠当作基准。
+</p>
+
+<p class="section-text">
+    无论是日常查阅资料、寻找常用工具，还是偶尔探索某个垂直领域，一个稳定的入口往往能省去大量重复搜索的时间。所谓「稳定」，并不仅仅指网站能否打开，更在于它的分类逻辑是否一致、链接是否经过筛选、页面是否长期保持可用。这些细节很难被一眼看见，却会在日复一日的使用中积累成信任。
+</p>
+
+<div class="pullquote">
+    <p>一个好的导航页面，不该让人感到「被引导」，而应该让人觉得「本来就在那里」。</p>
+</div>
+
+<h2 class="section-head">不只是列表，更是筛网</h2>
+
+<p class="section-text">
+    在互联网的早期，导航站点几乎是每个人的网络起点。后来搜索引擎变得强大，导航逐渐被边缘化，但一个有趣的现象是：当你想找某个特定领域的资源库、小众社区、或者某些不再活跃于主流推荐列表的网站时，搜索引擎给出的结果往往混杂大量商业内容或过时页面。这时，一份人工维护、定期更新的导航列表，反而成为效率更高的选择。
+</p>
+
+<p class="section-text">
+    <a href="https://dh-ng.com" class="inline-link">ng导航</a>的收录思路倾向于「实用且长期存在」——它不会追逐热点而堆砌短命链接，也不会为了数量而降低筛选标准。每个分类下的条目都经过实际访问和评估，确保用户点过去的时候，看到的是有价值的内容，而不是失效页面或过度营销的着陆页。
+</p>
+
+<div class="highlight-box">
+    <p><strong>一点观察</strong></p>
+    <p>很多导航站喜欢用醒目的按钮和动态特效来营造「丰富感」，但真正使用时，反而容易分散注意力。ng导航的设计选择了一种更安静的节奏：页面以文字和留白为主，视觉重心自然落在链接本身。这种克制让浏览者更容易找到自己想要的，而不是被页面的装饰牵着走。</p>
+</div>
+
+<h2 class="section-head">适合的场景</h2>
+
+<p class="section-text">
+    如果你经常需要查阅行业文档、设计素材、开源项目或学术资源，一个分类清晰且持续维护的导航页能帮你在不同任务间快速切换。对于偶尔探索网络的用户来说，它像一本「精选目录」——不需要在搜索引擎的广告位中反复辨别，直接点开感兴趣的类别，就能触达一批经过初筛的站点。
+</p>
+
+<p class="section-text">
+    当然，没有任何导航能覆盖所有人的需求，但一个坦诚的、长期更新的页面，至少可以让你感受到「有人认真维护过」。这种确定性，在如今快节奏的网络环境里，反而成了一种稀缺的品质。
+</p>
+
+<div class="footer-note">
+    <p>如果你也在寻找一个安静、可靠、不打扰人的网络起点，不妨把 <a href="https://dh-ng.com">ng导航</a> 放进书签栏。</p>
+    <p style="margin-top: 20px; font-size: 0.9rem; color: #8a8076;">—— 它只是站在那里，等你需要的时候点开。</p>
+</div>
+
+</body>
+</html>
